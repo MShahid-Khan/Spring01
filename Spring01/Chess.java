@@ -431,7 +431,6 @@ public class Chess {
     }
 
     public static void loadGame(Chessmen[][] aChessboard) {
-        BufferedWriter writer = null;
         try {
             File gameFile = new File("SavedGame.txt");
             if (!gameFile.exists()) {
@@ -447,11 +446,6 @@ public class Chess {
             }
         } catch (IOException ex) {
             System.out.println(ex.toString());
-        } finally {
-            try {
-                writer.close();
-            } catch (Exception e) {
-            }
-        }
+        } 
     }
 }
